@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:habbittracker/pages/home_page.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive/hive.dart';
+
 
 void main() async {
   //initialize hive
