@@ -4,20 +4,22 @@ class MyAlertDialog extends StatelessWidget {
   final controller;
   final VoidCallback onSave;
   final VoidCallback onCancel;
+  final String hintText;
 
 
-  const MyAlertDialog({Key? key, required this.controller, required this.onSave,required this.onCancel}) : super(key: key);
+  const MyAlertDialog({Key? key, required this.controller, required this.onSave,required this.onCancel, required this.hintText}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
       content:  TextField(
           controller:controller,
-        decoration: const InputDecoration(
-          enabledBorder: OutlineInputBorder(
+        decoration:  InputDecoration(
+          hintText: hintText ,
+          enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.grey),
           ),
-          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
+          focusedBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
         ),
       ),
       actions: [
